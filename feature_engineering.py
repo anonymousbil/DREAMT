@@ -11,7 +11,7 @@ To use these functions, import this script and call the desired function with th
 For example:
 
 from feature_engineering import *
-
+fg
 fe_df = extract_domain_features(data, features, window_size=10)
 
 # this function computes features for all participants
@@ -825,7 +825,7 @@ def TEMP_summary(segment_df):
     
     returns mean max min and standard devation"""
     temps = segment_df.loc[:, "TEMP"].to_numpy()
-    temps = temps[(temps >= 26) & (temps <= 40)]
+    temps = temps[(temps >= 31) & (temps <= 40)]
     try:
         temp_features_dict = {
             "TEMP_mean": np.mean(temps),
